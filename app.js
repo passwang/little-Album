@@ -10,6 +10,8 @@ app.use(express.static("./uploads"));
 //首页
 app.get("/",router.showIndex);
 app.get("/:albumName",router.showAlbumName);
+app.get("/upload",router.showUp);
+app.post("/form", router.doPost);
 //最后的最后
 app.use(function (req,res) {
     res.render("err");
